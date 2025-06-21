@@ -1,0 +1,44 @@
+<!-- <p>main-page works!</p> -->
+
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<div class="background">
+  <aside>
+    <ul>
+      <li>Favorites</li>
+      <li (click)="handleWatchlist">Watch List</li>
+    </ul>
+  </aside>
+
+  <button class="logout" (click)=logoutFunction()>Logout</button>
+  <div class="container" id="titleAndSearch">
+    <h1>Start Searching</h1>
+    <input type="text" name="search" placeholder="Search..." class="search-input" (keydown.enter)="triggerSearch()" [(ngModel)]="searchValue">
+    
+    
+  </div>
+  
+  <div id="white-display-box">
+
+    <!-- lowkey might layer something underneath for depth -->
+     <div class="media-scroller">
+      <div class="movie-card" *ngFor="let movie of movieArray"> 
+      <!-- place the image here ig -->
+      <img [src]="movie.movie.image" width="200" height="300">
+      <h2>{{movie.movie.title}}</h2>
+      <p>{{movie.movie.overview}}</p>
+      <p style="display: none;">{{movie.movie.id}}</p>
+      <button (click)="handleFavorites($event)">Add to Favorites</button>
+      <button (click)="handleWatchlist($event)">Add to Watchlist</button>
+      </div>
+     </div>
+    
+
+  </div>
+</div>

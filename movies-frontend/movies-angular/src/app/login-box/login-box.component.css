@@ -1,0 +1,163 @@
+.login-box {
+  /* border: 2px solid; */
+  /* border-radius: 0.5em; */
+  height: 400px;
+  width: 500px;
+  box-shadow: 0px 0px 19px 0px #A3E3F7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: white;
+  border-radius: 25px 25px 25px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+
+}
+
+input { /*Why are the input fields not exactly center FIX THAT LATER*/
+	background-color: #eee;
+  border-radius: 25px 25px 25px 25px;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 90%;
+  /* padding: 5px; */
+  /* justify-content: center; */
+}
+
+button {
+  color: white;
+  background-color: #A3E3F7;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px #A3E3F7;
+  border-radius: 25px 25px 25px 25px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: inline;
+}
+
+/* .login-button {
+  color: white;
+  background-color: #A3E3F7;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px #A3E3F7;
+  border-radius: 25px 25px 25px 25px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: inline;
+
+} */
+
+p {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.signup-button {
+  display: inline;
+}
+
+.signup-container {
+  display: none;
+  /* padding-left: auto;
+  padding-right: auto; */
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  width: 75%;
+  
+}
+
+/* .loginContainer {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+} */
+
+.fade-out {
+  /* width: fit-content; */
+  /* opacity: 0; */
+  animation: 0.5s loginFadeOut forwards;
+  /* display: none; */
+  /* animation-fill-mode: forwards; */
+  /* transition: opacity 3s ease-in-out;
+  opacity: 1; */
+ 
+
+}
+/* 
+.test {
+  background-color: black;
+} */
+
+@keyframes loginFadeOut {
+  from {
+    opacity: 1;
+    
+  }
+
+  to {
+    opacity: 0;
+    /* display: none; */
+  }
+}
+
+.fade-in {
+  animation: 0.5s signupFadeIn forwards;
+}
+
+@keyframes signupFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+button:active {
+	transform: scale(0.9);
+}
+
+.color-box {
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#66b3ff, #b3d9ff);
+
+}
+
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 1000px;
+  height: 30px;
+  font-size: 50px;
+  z-index: 3;
+  color: white; 
+  /* maybe change color later? */
+
+}
